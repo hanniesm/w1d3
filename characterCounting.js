@@ -1,9 +1,8 @@
 function countLetters(string) {
     var outObject = {}
-    var uniqueChar = '';
 
     for (var char in string) {
-        if (uniqueChar.indexOf(char) === -1 && string[char] !== ' ') {
+        if (string[char] !== ' ') {
             outObject[string[char]] = 0;
         }
     }
@@ -14,9 +13,11 @@ function countLetters(string) {
         }
     }
 
-    var instances = 0;
-
     console.log(outObject);
 }
 
-countLetters('lighthouse in the house');
+// countLetters('lighthouse in the house');
+
+var string = process.argv[2];
+
+countLetters(string);

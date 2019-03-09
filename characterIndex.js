@@ -13,8 +13,6 @@ function characterIndex(string) {
         }
     }
 
-    var instances = 0;
-
     console.log(outObject);
 }
 
