@@ -61,18 +61,22 @@ function printFollowers(id) {
 
 // console.log(printFollowers("f04"));
 
-function numFollowers() {
-  for (var i in data) {
-    var follows = data[i].follows;
-   return follows.length
-  }
+function numFollowers(id) {
+   return data[id].follows.length
 }
 
-numFollowers();
+// console.log(numFollowers("f04"));
 
-function mostFollowers() {
-  for (var i in data) {
-    var follows = data[i].follows;
-    var numFollowers = follows.length
-  }
+//sort object by the number of followers
+function mostFollowers(data) {
+  data.sort(function(a, b) {
+    return a - b
+  })
+  console.log(data)
+  // for (var i in data) {
+  //   var followers = data[i].follows;
+    // console.log(data);
+    // var numFollowers = numFollowers()
+  // }
 }
+console.log(mostFollowers(data));
